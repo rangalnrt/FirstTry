@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="ParallelTestSuite">
+<listeners>
+        <listener class-name="com.practise.RetryListener"/>
+    </listeners>
+    <test name="ChromeTest">
+        <classes>
+            <class name="com.practise.StringPractise"/>
+        </classes>
+    </test>
+</!suite>
