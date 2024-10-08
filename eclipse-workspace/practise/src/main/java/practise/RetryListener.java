@@ -1,11 +1,9 @@
 package practise;
 
+
 import org.testng.ITestResult;
-
-
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestNGListener;
-
 
 public class RetryListener implements ITestNGListener {
     private int retryCount = 0;

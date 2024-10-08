@@ -4,13 +4,16 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
+
+import org.testng.asserts.SoftAssert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -22,10 +25,11 @@ public class StringPractise {
 	WebDriver driver = new ChromeDriver();
 	SoftAssert soft = new SoftAssert();
 	WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(30));
+	ReadingExcelforwebtest Excelforwebtest = new ReadingExcelforwebtest();
 	
 	@DataProvider(name="loginname")
 	public Object[][]loginname(){
-		return ReadingExcelforwebtest.getexceldata("C:\\Users\\ranga\\OneDrive\\Desktop\\Pandas\\name.xlsx","Sheet1");
+		return Excelforwebtest.getexceldata("C:\\Users\\ranga\\OneDrive\\Desktop\\Pandas\\name.xlsx","Sheet1");
 	}
 	@Test(dataProvider="loginname")
 	public void strikerate(String firstname, String lastname) {
