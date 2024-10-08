@@ -17,7 +17,7 @@ public class stringPractice {
 		// TODO Auto-generated method stub
 		
 		//System.out.println(readexcel("C:\\Users\\ranga\\OneDrive\\Desktop\\name.xlsx", "Sheet1"));
-		main1();
+		sum();
 	}
 	
 public static Object[][] readexcel(String filename, String sheetname) throws IOException {
@@ -160,7 +160,22 @@ public static void vowels() {
             String workingDirectory = System.getProperty("user.dir");
             System.out.println("Working Directory: " + workingDirectory);
         }
-    
+    // Given int sum = 10; and an array {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, find the pairs that add up to 10 (e.g., {1, 9}, {2, 8}, etc.).
+    public static void sum() {
+    	int[] a= {1,2,3,4,5,6,7,8,9,10};
+    	
+    	
+    	
+    	for(int i=0;i<a.length;i++) {
+    		for(int j=0;j<a.length;j++) {
+    			int sum =a[i]+a[j];
+        		if(sum==10) {
+        			System.out.println("Pair of values is "+a[i]+" second value "+a[j]);
+    		}
+    		
+    		}
+    	}
+    }
 
   
 }
